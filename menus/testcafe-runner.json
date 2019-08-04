@@ -1,0 +1,18 @@
+{
+  "context-menu": {
+    "atom-text-editor": [{
+        "label": "Run TestCafe",
+        "command": "testcafe-runner:runSelectedTest"
+      }]
+  },
+  "menu": [{
+      "label": "Packages",
+      "submenu": [{
+          "label": "TestCafe",
+          "submenu": [{
+              "label": "Run",
+              "command": "testcafe-runner:runSelectedTest"
+          }]
+        }]
+    }]
+}
