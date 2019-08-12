@@ -23,6 +23,7 @@ describe('TestcafeRunner', () => {
 
             // This is an activation event, triggering it will cause the package to be
             // activated.
+            atom.commands.dispatch(workspaceElement, 'testcafe-runner:toggle');
             atom.commands.dispatch(workspaceElement, 'testcafe-runner:runSelectedTest');
 
             waitsForPromise(() => {
@@ -37,6 +38,7 @@ describe('TestcafeRunner', () => {
 
                 let testcafeRunnerPanel = atom.workspace.panelForItem(testcafeRunnerElement);
                 expect(testcafeRunnerPanel.isVisible()).toBe(true);
+                atom.commands.dispatch(workspaceElement, 'testcafe-runner:toggle');
                 atom.commands.dispatch(workspaceElement, 'testcafe-runner:runSelectedTest');
                 expect(testcafeRunnerPanel.isVisible()).toBe(false);
             });

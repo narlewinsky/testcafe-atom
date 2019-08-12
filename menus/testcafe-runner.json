@@ -1,18 +1,21 @@
 {
-  "context-menu": {
-    "atom-text-editor": [{
-        "label": "Run TestCafe",
-        "command": "testcafe-runner:runSelectedTest"
-      }]
-  },
-  "menu": [{
-      "label": "Packages",
-      "submenu": [{
-          "label": "TestCafe",
-          "submenu": [{
-              "label": "Run a selected test",
-              "command": "testcafe-runner:runSelectedTest"
-          }]
+    "context-menu": {
+        "atom-text-editor": [{
+            "label": "Run TestCafe",
+            "command": "testcafe-runner:runSelectedTest"
+        }]
+    },
+    "menu": [{
+        "label": "Packages",
+        "submenu": [{
+            "label": "TestCafe",
+            "submenu": [{
+                "label": "Run a selected test",
+                "command": "testcafe-runner:runSelectedTest"
+            }, {
+                "label": "Toggle output panel",
+                "command": "testcafe-runner:toggle"
+            }]
         }]
     }]
 }

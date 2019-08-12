@@ -11,6 +11,7 @@
     ],
     "activationCommands": {
         "atom-workspace": [
+            "testcafe-runner:toggle",
             "testcafe-runner:runSelectedTest"
         ]
     },
