@@ -8,66 +8,66 @@ import TestcafeRunner from '../lib/testcafe-runner';
 // or `fdescribe`). Remove the `f` to unfocus the block.
 
 describe('TestcafeRunner', () => {
-  let workspaceElement, activationPromise;
+    let workspaceElement, activationPromise;
 
-  beforeEach(() => {
-    workspaceElement = atom.views.getView(atom.workspace);
-    activationPromise = atom.packages.activatePackage('testcafe-runner');
-  });
-
-  describe('when the testcafe-runner:toggle event is triggered', () => {
-    it('hides and shows the modal panel', () => {
-      // Before the activation event the view is not on the DOM, and no panel
-      // has been created
-      expect(workspaceElement.querySelector('.testcafe-runner')).not.toExist();
-
-      // This is an activation event, triggering it will cause the package to be
-      // activated.
-      atom.commands.dispatch(workspaceElement, 'testcafe-runner:toggle');
-
-      waitsForPromise(() => {
-        return activationPromise;
-      });
-
-      runs(() => {
-        expect(workspaceElement.querySelector('.testcafe-runner')).toExist();
-
-        let testcafeRunnerElement = workspaceElement.querySelector('.testcafe-runner');
-        expect(testcafeRunnerElement).toExist();
-
-        let testcafeRunnerPanel = atom.workspace.panelForItem(testcafeRunnerElement);
-        expect(testcafeRunnerPanel.isVisible()).toBe(true);
-        atom.commands.dispatch(workspaceElement, 'testcafe-runner:toggle');
-        expect(testcafeRunnerPanel.isVisible()).toBe(false);
-      });
+    beforeEach(() => {
+        workspaceElement = atom.views.getView(atom.workspace);
+        activationPromise = atom.packages.activatePackage('testcafe-runner');
     });
 
-    it('hides and shows the view', () => {
-      // This test shows you an integration test testing at the view level.
+    describe('when the testcafe-runner:toggle event is triggered', () => {
+        it('hides and shows the modal panel', () => {
+            // Before the activation event the view is not on the DOM, and no panel
+            // has been created
+            expect(workspaceElement.querySelector('.testcafe-runner')).not.toExist();
 
-      // Attaching the workspaceElement to the DOM is required to allow the
-      // `toBeVisible()` matchers to work. Anything testing visibility or focus
-      // requires that the workspaceElement is on the DOM. Tests that attach the
-      // workspaceElement to the DOM are generally slower than those off DOM.
-      jasmine.attachToDOM(workspaceElement);
+            // This is an activation event, triggering it will cause the package to be
+            // activated.
+            atom.commands.dispatch(workspaceElement, 'testcafe-runner:toggle');
 
-      expect(workspaceElement.querySelector('.testcafe-runner')).not.toExist();
+            waitsForPromise(() => {
+                return activationPromise;
+            });
 
-      // This is an activation event, triggering it causes the package to be
-      // activated.
-      atom.commands.dispatch(workspaceElement, 'testcafe-runner:toggle');
+            runs(() => {
+                expect(workspaceElement.querySelector('.testcafe-runner')).toExist();
 
-      waitsForPromise(() => {
-        return activationPromise;
-      });
+                let testcafeRunnerElement = workspaceElement.querySelector('.testcafe-runner');
+                expect(testcafeRunnerElement).toExist();
 
-      runs(() => {
-        // Now we can test for view visibility
-        let testcafeRunnerElement = workspaceElement.querySelector('.testcafe-runner');
-        expect(testcafeRunnerElement).toBeVisible();
-        atom.commands.dispatch(workspaceElement, 'testcafe-runner:toggle');
-        expect(testcafeRunnerElement).not.toBeVisible();
-      });
+                let testcafeRunnerPanel = atom.workspace.panelForItem(testcafeRunnerElement);
+                expect(testcafeRunnerPanel.isVisible()).toBe(true);
+                atom.commands.dispatch(workspaceElement, 'testcafe-runner:toggle');
+                expect(testcafeRunnerPanel.isVisible()).toBe(false);
+            });
+        });
+
+        it('hides and shows the view', () => {
+            // This test shows you an integration test testing at the view level.
+
+            // Attaching the workspaceElement to the DOM is required to allow the
+            // `toBeVisible()` matchers to work. Anything testing visibility or focus
+            // requires that the workspaceElement is on the DOM. Tests that attach the
+            // workspaceElement to the DOM are generally slower than those off DOM.
+            jasmine.attachToDOM(workspaceElement);
+
+            expect(workspaceElement.querySelector('.testcafe-runner')).not.toExist();
+
+            // This is an activation event, triggering it causes the package to be
+            // activated.
+            atom.commands.dispatch(workspaceElement, 'testcafe-runner:toggle');
+
+            waitsForPromise(() => {
+                return activationPromise;
+            });
+
+            runs(() => {
+                // Now we can test for view visibility
+                let testcafeRunnerElement = workspaceElement.querySelector('.testcafe-runner');
+                expect(testcafeRunnerElement).toBeVisible();
+                atom.commands.dispatch(workspaceElement, 'testcafe-runner:toggle');
+                expect(testcafeRunnerElement).not.toBeVisible();
+            });
+        });
     });
-  });
 });
