@@ -10,7 +10,7 @@
       "submenu": [{
           "label": "TestCafe",
           "submenu": [{
-              "label": "Run",
+              "label": "Run a selected test",
               "command": "testcafe-runner:runSelectedTest"
           }]
         }]

@@ -15,7 +15,7 @@ describe('TestcafeRunner', () => {
         activationPromise = atom.packages.activatePackage('testcafe-runner');
     });
 
-    describe('when the testcafe-runner:toggle event is triggered', () => {
+    describe('when the testcafe-runner:runSelectedTest event is triggered', () => {
         it('hides and shows the modal panel', () => {
             // Before the activation event the view is not on the DOM, and no panel
             // has been created
@@ -23,7 +23,7 @@ describe('TestcafeRunner', () => {
 
             // This is an activation event, triggering it will cause the package to be
             // activated.
-            atom.commands.dispatch(workspaceElement, 'testcafe-runner:toggle');
+            atom.commands.dispatch(workspaceElement, 'testcafe-runner:runSelectedTest');
 
             waitsForPromise(() => {
                 return activationPromise;
@@ -37,7 +37,7 @@ describe('TestcafeRunner', () => {
 
                 let testcafeRunnerPanel = atom.workspace.panelForItem(testcafeRunnerElement);
                 expect(testcafeRunnerPanel.isVisible()).toBe(true);
-                atom.commands.dispatch(workspaceElement, 'testcafe-runner:toggle');
+                atom.commands.dispatch(workspaceElement, 'testcafe-runner:runSelectedTest');
                 expect(testcafeRunnerPanel.isVisible()).toBe(false);
             });
         });

@@ -2,7 +2,7 @@
     "name": "testcafe-runner",
     "main": "./lib/testcafe-runner",
     "version": "0.1.0",
-    "description": "A debugger package for Atom, allows to run TestCafe tests from context menu or built-in commands",
+    "description": "A debugger package for Atom allows running TestCafe tests from the context menu or built-in commands",
     "author": "Nara Lewinsky",
     "keywords": [
         "TestCafe",
