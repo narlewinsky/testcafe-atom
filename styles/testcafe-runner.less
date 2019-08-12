@@ -4,12 +4,29 @@
 // for a full listing of what's available.
 @import "ui-variables";
 
-.testcafe-runner {
+.testcafe-runner-view {
     padding: 16px;
     // font-family: 'PT Mono', 'Mononoki', 'Consolas', 'Ubuntu Mono', monospace;
     font-family: 'Ubuntu Mono';
+    overflow: auto;
+    overflow-y: scroll;
+    max-height: 300px;
 }
 
 .testcafe-message {
     margin: 0;
+}
+
+.testcafe-runner-view-close-button {
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 4px;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.testcafe-runner-view-close-button::after {
+    content: '\00274C';
 }
