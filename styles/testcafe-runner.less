@@ -3,13 +3,12 @@
 // See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
 // for a full listing of what's available.
 @import "ui-variables";
+@import './xterm.css';
 
 .testcafe-runner-view {
-    padding: 16px;
     font-family: 'PT Mono', 'Mononoki', 'Consolas', 'Ubuntu Mono', monospace;
-    overflow: auto;
-    overflow-y: scroll;
-    max-height: 300px;
+    overflow: scroll;
+    max-height: 400px;
 }
 
 .testcafe-message {
@@ -27,8 +26,14 @@
     padding: 2px;
     cursor: pointer;
     font-size: 11px;
+    z-index: 2000;
 }
 
 .testcafe-runner-view-close-button::after {
     content: '\00274C';
+}
+
+.testcafe-runner-terminal {
+    overflow: scroll;
+    max-height: 400px;
 }
