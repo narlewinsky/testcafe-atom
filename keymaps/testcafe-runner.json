@@ -1,5 +1,5 @@
 {
   "atom-workspace": {
-    "ctrl-alt-t": "testcafe-runner:runSelectedTest"
+    "ctrl-alt-t": "testcafe-runner:runIt"
   }
 }

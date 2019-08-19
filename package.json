@@ -12,7 +12,7 @@
     "activationCommands": {
         "atom-workspace": [
             "testcafe-runner:toggle",
-            "testcafe-runner:runSelectedTest"
+            "testcafe-runner:runIt"
         ]
     },
     "activationEvents": [

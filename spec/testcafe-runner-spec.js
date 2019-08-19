@@ -15,7 +15,7 @@ describe('TestcafeRunner', () => {
         activationPromise = atom.packages.activatePackage('testcafe-runner');
     });
 
-    describe('when the testcafe-runner:runSelectedTest event is triggered', () => {
+    describe('when the testcafe-runner:runIt event is triggered', () => {
         it('hides and shows the modal panel', () => {
             // Before the activation event the view is not on the DOM, and no panel
             // has been created
@@ -24,7 +24,7 @@ describe('TestcafeRunner', () => {
             // This is an activation event, triggering it will cause the package to be
             // activated.
             atom.commands.dispatch(workspaceElement, 'testcafe-runner:toggle');
-            atom.commands.dispatch(workspaceElement, 'testcafe-runner:runSelectedTest');
+            atom.commands.dispatch(workspaceElement, 'testcafe-runner:runIt');
 
             waitsForPromise(() => {
                 return activationPromise;
@@ -33,13 +33,13 @@ describe('TestcafeRunner', () => {
             runs(() => {
                 expect(workspaceElement.querySelector('.testcafe-runner')).toExist();
 
-                let testcafeRunnerElement = workspaceElement.querySelector('.testcafe-runner');
-                expect(testcafeRunnerElement).toExist();
+                let testCafeRunnerElement = workspaceElement.querySelector('.testcafe-runner');
+                expect(testCafeRunnerElement).toExist();
 
-                let testcafeRunnerPanel = atom.workspace.panelForItem(testcafeRunnerElement);
+                let testcafeRunnerPanel = atom.workspace.panelForItem(testCafeRunnerElement);
                 expect(testcafeRunnerPanel.isVisible()).toBe(true);
                 atom.commands.dispatch(workspaceElement, 'testcafe-runner:toggle');
-                atom.commands.dispatch(workspaceElement, 'testcafe-runner:runSelectedTest');
+                atom.commands.dispatch(workspaceElement, 'testcafe-runner:runIt');
                 expect(testcafeRunnerPanel.isVisible()).toBe(false);
             });
         });
@@ -65,10 +65,10 @@ describe('TestcafeRunner', () => {
 
             runs(() => {
                 // Now we can test for view visibility
-                let testcafeRunnerElement = workspaceElement.querySelector('.testcafe-runner');
-                expect(testcafeRunnerElement).toBeVisible();
+                let testCafeRunnerElement = workspaceElement.querySelector('.testcafe-runner');
+                expect(testCafeRunnerElement).toBeVisible();
                 atom.commands.dispatch(workspaceElement, 'testcafe-runner:toggle');
-                expect(testcafeRunnerElement).not.toBeVisible();
+                expect(testCafeRunnerElement).not.toBeVisible();
             });
         });
     });

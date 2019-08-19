@@ -2,7 +2,7 @@
     "context-menu": {
         "atom-text-editor": [{
             "label": "Run TestCafe",
-            "command": "testcafe-runner:runSelectedTest"
+            "command": "testcafe-runner:runIt"
         }]
     },
     "menu": [{
@@ -11,7 +11,7 @@
             "label": "TestCafe",
             "submenu": [{
                 "label": "Run a selected test",
-                "command": "testcafe-runner:runSelectedTest"
+                "command": "testcafe-runner:runIt"
             }, {
                 "label": "Toggle output panel",
                 "command": "testcafe-runner:toggle"
