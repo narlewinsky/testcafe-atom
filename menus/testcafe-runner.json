@@ -10,10 +10,10 @@
         "submenu": [{
             "label": "TestCafe",
             "submenu": [{
-                "label": "Run a selected test",
+                "label": "Run it",
                 "command": "testcafe-runner:runIt"
             }, {
-                "label": "Toggle output panel",
+                "label": "Restore panel",
                 "command": "testcafe-runner:toggle"
             }]
         }]
