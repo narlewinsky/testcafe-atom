@@ -1,10 +1,12 @@
 # TestCafe Runner for Atom
 
-Testing package for Atom that allows you to run TestCafe tests. [TestCafe](https://devexpress.github.io/testcafe/) is a node.js tool to automate end-to-end web testing.
+Testing package for Atom that allows to run TestCafe tests.
+
+[TestCafe](https://devexpress.github.io/testcafe/) is a node.js tool to automate end-to-end web testing.
 
 ## Install
 
-You can install via apm: `apm install testcafe-runner`
+You can install via apm: `apm install testcafe-runner`.
 
 Or navigate to the install tab in Atom’s settings view, and search for `testcafe-runner`.
 
@@ -16,8 +18,11 @@ This extension allows to run TestCafe test quick and easy from Atom context menu
 Step by step:
 
 - Add project folder to Atom (`Important`: project root directory will must contain a `package.json` and `node_modules` folder)
+
 - Highlight the line with the declaration of the test or fixture.
+
 - Choose one of the test launch options:
+
     - In the context menu: `Run TestCafe` (or `cmd+ctrl+alt+t`)
     - In the atom command panel: `testcafe-runner:runIt`.
 
