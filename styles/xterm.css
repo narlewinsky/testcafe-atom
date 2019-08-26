@@ -30,13 +30,11 @@
  *   has been extended to include xterm CSI codes, among
  *   other features.
  */
-
 /**
  *  Default styles for xterm.js
  */
-
 .xterm {
-    font-feature-settings: "liga" 0;
+    font-feature-settings: "liga"0;
     position: relative;
     user-select: none;
     -ms-user-select: none;
