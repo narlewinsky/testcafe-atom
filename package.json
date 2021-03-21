@@ -1,7 +1,7 @@
 {
     "name": "testcafe-runner",
     "main": "./lib/testcafe-runner",
-    "version": "0.7.0",
+    "version": "0.7.1",
     "license": "MIT",
     "description": "Package for Atom that allows to run TestCafe tests",
     "repository": "https://github.com/narlewinsky/testcafe-atom",
