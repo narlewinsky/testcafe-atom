@@ -5,7 +5,7 @@
     "license": "MIT",
     "description": "Package for Atom that allows to run TestCafe tests",
     "repository": "https://github.com/narlewinsky/testcafe-atom",
-    "author": "Nara Lewinsky",
+    "author": "Nar Lewinsky",
     "keywords": [
         "TestCafe",
         "test",
