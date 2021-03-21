@@ -4,7 +4,7 @@
     "version": "0.6.6",
     "license": "MIT",
     "description": "Package for Atom that allows to run TestCafe tests",
-    "repository": "https://github.com/atom/testcafe-runner",
+    "repository": "https://github.com/narlewinsky/testcafe-atom",
     "author": "Nara Lewinsky",
     "keywords": [
         "TestCafe",
